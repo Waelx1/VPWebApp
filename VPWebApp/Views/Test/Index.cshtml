@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <environment names="Development">
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+</head>
+<body>
+    <p><h3>TEST DES SERVICES</h3></p><br />
+    <div>
+        <input id="button1" type="button" value="Authenticate" onclick="location.href='@Url.Action("AuthenticateView", "Test")';" />
+        <input id="button2" type="button" value="Confidentials" onclick="location.href='@Url.Action("ConfidentialsView", "Test")';" />
+    </div>
+</body>
+</html>

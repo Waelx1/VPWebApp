@@ -1,0 +1,23 @@
+﻿@model VPWebApp.Models.UserModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Confidentials Test</title>
+    <environment names="Development">
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+</head>
+<body>
+    <p><h3>Confidentials Test</h3></p><br />
+    @using (Html.BeginForm("RequestConfidentialsService", "Test", FormMethod.Get))
+    {
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email)
+        <input id="Submit" type="submit" value="Envoyer" />
+    }
+</body>
+</html>

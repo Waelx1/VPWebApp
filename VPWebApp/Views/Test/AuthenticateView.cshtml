@@ -1,0 +1,25 @@
+﻿@model VPWebApp.Models.UserModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Authenticate Test</title>
+    <environment names="Development">
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+</head>
+<body>
+    <p><h3>Authenticate Test</h3></p><br />
+    @using (Html.BeginForm("Authenticate", "Authenticate", FormMethod.Post))
+    {
+        @Html.LabelFor(m => m.Email)
+        @Html.TextBoxFor(m => m.Email)
+        @Html.LabelFor(m => m.Password)
+        @Html.PasswordFor(m => m.Password)
+        <input id="Submit" type="submit" value="Envoyer" />
+    }
+</body>
+</html>
